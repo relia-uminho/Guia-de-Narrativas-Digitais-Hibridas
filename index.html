@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="pt-PT" class="h-full bg-slate-50">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Interativo - IA para Currículo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .tab-button.active {
+            border-bottom-color: #5096d2; /* indigo-600 */
+            color: #5096d2; /* indigo-600 */
+            font-weight: 600;
+        }
+        .tab-button {
+            border-bottom-width: 2px;
+            border-bottom-color: transparent;
+        }
+        .tab-pane {
+            display: none;
+        }
+        .tab-pane.active {
+            display: block;
+        }
+        .prompt-field {
+            color: #5096d2; /* indigo-600 */
+            font-weight: 600;
+        }
+        pre {
+            white-space: pre-wrap;       
+            word-wrap: break-word;      
+        }
+      html { scroll-behavior: smooth; }
+        .anchor-offset { scroll-margin-top: 6rem; }
+    </style>
+    </head>
+
+<body class="h-full text-slate-800">
+  <nav class="bg-[#5096d2] text-white fixed w-full top-0 left-0 shadow-md z-50">
+    <div class="flex justify-center">
+      <div class="w-full max-w-5xl pl-4 pr-3 sm:pl-6 sm:pr-5 lg:pl-8 lg:pr-7 flex justify-between items-center h-16">
+        <a href="#" class="flex items-center gap-3">
+          <img src="Logo RELIA 1.png" alt="Logo RELIA" class="h-10 w-auto">
+          <span class="text-xl font-semibold tracking-tight">RELIA</span>
+        </a>
+
+        <div class="hidden md:flex space-x-4">
+          <a href="#inicio" class="hover:text-slate-200 transition">Início</a>
+          <a href="#pic" class="hover:text-slate-200 transition">Metodologia PIC</a>
+          <a href="#etapa-previa" class="hover:text-slate-200 transition">Etapa Prévia</a>
+          <a href="#multimedia" id="nav-metodologias" class="hover:text-slate-200 transition">Metodologias</a>
+          <a href="#submissao" class="hover:text-slate-200 transition">Submissão</a>
+        </div>
+
+        <button id="menu-btn" class="md:hidden focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="menu-dropdown" class="hidden md:hidden bg-[#5096d2] border-t border-slate-100">
+      <div class="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <a href="#inicio" class="block px-4 py-2 hover:bg-[#4b8dc8]">Início</a>
+        <a href="#pic" class="block px-4 py-2 hover:bg-[#4b8dc8]">Metodologia PIC</a>
+        <a href="#etapa-previa" class="block px-4 py-2 hover:bg-[#4b8dc8]">Etapa Prévia</a>
+        <a href="#multimedia" id="nav-metodologias-mobile" class="block px-4 py-2 hover:bg-[#4b8dc8]">Metodologias</a>
+        <a href="#submissao" class="block px-4 py-2 hover:bg-[#4b8dc8]">Submissão</a>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <div class="pt-20 max-w-5xl mx-auto p-4 sm:p-6 lg:p-8" id="topo">
+        
+        <header class="text-center mt-24 mb-10">
+          <h1 class="text-3xl font-bold text-slate-900 sm:text-4xl">
+            Narrativas Digitais Híbridas
+          </h1>
+          <p class="mt-4 text-lg text-slate-600">
+            Um Guia Metodológico Interativo para a Exploração Multimedial e Lúdica do Currículo com Recurso a Inteligência Artificial.
+          </p>
+        </header>
+
+
+
+        <section id="inicio" class="mb-10 bg-white p-6 rounded-lg shadow-sm border border-slate-200 anchor-offset">
+            <h2 class="text-2xl font-bold text-[#5096d2] mb-4">Repensar o Currículo na Era da IA</h2>
+            <p class="text-slate-600 mb-4">
+                Constata-se a existência de uma ecologia mediática na qual os discentes consomem e produzem informação predominantemente através de canais audiovisuais e interativos. O currículo, não obstante, permanece largamente ancorado ao texto. Neste contexto, a Inteligência Artificial Generativa oferece uma ponte sem precedentes para a tradução do rigor textual curricular.
+            </p>
+            <p class="text-slate-600 mb-4">
+                O presente guia foca-se em metodologias distintas que utilizam a IA de formas díspares, visando diferentes produtos pedagógicos:
+            </p>
+            <ul class="list-disc list-inside text-slate-600 mb-4 space-y-1">
+                <li><strong>A Análise de Fontes:</strong> Utilizar a IA para diagnosticar, resumir e identificar padrões no corpus curricular.</li>
+                <li><strong>A Produção de Conteúdo Multimédia (Vídeo e Áudio):</strong> Focar-se na tradução do texto em formatos de consumo audiovisual.</li>
+                <li><strong>A Criação de Experiências Interativas (Jogos Educativos):</strong> Focar-se na transformação do texto em experiências lúdicas e gamificadas.</li>
+                <li><strong>A Geração de Artefactos Visuais (Imagem e Vídeo Curto):</strong> Focar-se na criação de elementos visuais singulares para apoio à aula.</li>
+            </ul>
+            <p class="text-slate-600">
+                O objetivo primordial do presente documento consiste em capacitar o corpo docente para a movimentação entre <em>"consumidor de currículo"</em> e <em>"designer de experiências de aprendizagem"</em>, mediante a seleção da metodologia mais adequada para cada objetivo pedagógico.
+            </p>
+</section>
+
+
+        <section id="inicio" class="mb-10 bg-white p-6 rounded-lg shadow-sm border border-slate-200 anchor-offset">
+            <h2 id="pic" class="text-2xl font-bold text-[#5096d2] mb-4 anchor-offset">A Metodologia Central: "Prompt-Iterate-Curate" (PIC)</h2>
+            <p class="text-slate-600 mb-4">
+                Independentemente da via selecionada (multimédia ou gamificação), o processo intelectual subjacente permanece idêntico. A criação de conteúdo de qualidade não resulta de um único comando expedito; constitui um processo de diálogo intelectual com a ferramenta.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-slate-100 p-4 rounded-md">
+                    <h3 class="font-semibold text-slate-900"><span class="text-[#5096d2] font-bold">P</span> (Prompt / Comando)</h3>
+                    <p class="text-sm text-slate-600 mt-1">O Design Pedagógico. O momento no qual o docente define a sua intenção como uma instrução de design detalhada.</p>
+                </div>
+                <div class="bg-slate-100 p-4 rounded-md">
+                    <h3 class="font-semibold text-slate-900"><span class="text-[#5096d2] font-bold">I</span> (Iterate / Iteração)</h3>
+                    <p class="text-sm text-slate-600 mt-1">O Diálogo Hermenêutico. O trabalho intelectual de refinamento do prompt com base no esboço inicial fornecido pela IA.</p>
+                </div>
+                <div class="bg-slate-100 p-4 rounded-md">
+                    <h3 class="font-semibold text-slate-900"><span class="text-[#5096d2] font-bold">C</span> (Curate / Curadoria)</h3>
+                    <p class="text-sm text-slate-600 mt-1">A Validação e Edição. O docente assume a função de editor final, garantindo o rigor e aplicando o refinamento humano.</p>
+                </div>
+            </div>
+        </section>
+
+<section class="mt-8">
+  <div class="bg-white border border-slate-200 rounded-xl shadow-md p-6">
+    <h2 class="text-2xl font-bold text-[#5096d2] mb-3 anchor-offset" id="etapa-previa">Etapa Prévia: Análise e Diagnóstico de Fontes (com NotebookLM)</h2>
+    <p class="text-slate-700 leading-relaxed">
+      Antes de iniciar a produção de conteúdos (Metodologias A, B ou C), é fundamental utilizar ferramentas como o 
+      <strong>NotebookLM</strong> para a sua função primária: a análise e a síntese de fontes. 
+      Esta etapa de diagnóstico permite ao docente identificar os pilares do seu corpus curricular, 
+      validar a informação e extrair os conceitos‑chave que servirão de base à criação.
+    </p>
+
+    <h3 class="text-lg font-semibold text-slate-800 mt-6 mb-2">
+      Modelos de Prompt para Análise de Fontes
+    </h3>
+    <p class="text-slate-700 leading-relaxed">
+      Os seguintes prompts são desenhados para o <strong>NotebookLM</strong>, após o carregamento das fontes curriculares 
+      (e.g., PDFs de manuais, artigos, excertos de obras).
+    </p>
+        
+    <div class="mt-6 space-y-6">
+      <div class="mb-4">
+        <div class="flex justify-between items-center mb-3">
+          <h5 class="font-semibold text-slate-800">3.1.1 Prompt de Síntese e Conceitos‑Chave</h5>
+          <button class="copy-button bg-[#5096d2] text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-[#3b7fb9] focus:outline-none focus:ring-2 focus:ring-[#5096d2] focus:ring-offset-2">
+            Copiar Prompt
+          </button>
+        </div>
+        <pre class="prompt-block bg-blue-50 p-4 rounded-lg overflow-x-auto text-sm text-slate-700">Com base em [FONTE(S) COMPLETA(S) // PARTE DA(S) FONTE(S)]
+1.  Gera um resumo de [NÚMERO DE PALAVRAS] palavras que sintetize os argumentos principais do corpus.
+2.  Identifica e lista os conceitos-chave ou termos técnicos mais importantes mencionados.
+3.  Extrai a tese ou argumento central de [NOME DA FONTE ESPECÍFICA].</pre>
+      </div>
+
+      <div class="mb-4">
+        <div class="flex justify-between items-center mb-3">
+          <h5 class="font-semibold text-slate-800">3.1.2 Prompt de Estruturação (FAQ e Cronologia)</h5>
+          <button class="copy-button bg-[#5096d2] text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-[#3b7fb9] focus:outline-none focus:ring-2 focus:ring-[#5096d2] focus:ring-offset-2">
+            Copiar Prompt
+          </button>
+        </div>
+        <pre class="prompt-block bg-blue-50 p-4 rounded-lg overflow-x-auto text-sm text-slate-700">Com base em [FONTE(S) COMPLETA(S) // PARTE DA(S) FONTE(S)]
+1.  Gera uma lista de [NÚMERO] Perguntas Frequentes (FAQs) que um aluno do [ANO DE ESCOLARIDADE] poderia ter sobre este tópico, com respostas diretas baseadas nas fontes.
+2.  [SE APLICÁVEL] Extrai uma cronologia dos [NÚMERO] eventos mais importantes descritos nas fontes, listando data e evento.</pre>
+      </div>
+
+      <div class="mb-2">
+        <div class="flex justify-between items-center mb-3">
+          <h5 class="font-semibold text-slate-800">3.1.3 Prompt de Análise Comparativa</h5>
+          <button class="copy-button bg-[#5096d2] text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-[#3b7fb9] focus:outline-none focus:ring-2 focus:ring-[#5096d2] focus:ring-offset-2">
+            Copiar Prompt
+          </button>
+        </div>
+        <pre class="prompt-block bg-blue-50 p-4 rounded-lg overflow-x-auto text-sm text-slate-700">COM BASE ESPECIFICAMENTE NAS FONTES [NOME DA FONTE A] e [NOME DA FONTE B],
+1.  Identifica [NÚMERO] pontos de concordância entre as duas fontes.
+2.  Identifica [NÚMERO] pontos de contradição ou divergência de abordagem entre as duas fontes.</pre>
+      </div>
+    </div>
+  </div>  
+</section>
+
+        <main>
+            <nav id="multimedia" class="flex border-b border-slate-200 mb-6 anchor-offset" aria-label="Tabs">
+                <button class="tab-button active py-4 px-6 text-base font-medium text-slate-500 hover:text-[#5096d2]" data-target="tab-multimedia-rapida">
+                    Metodologia A1: Multimédia (Rápida)
+                </button>
+                <button class="tab-button py-4 px-6 text-base font-medium text-slate-500 hover:text-[#5096d2]" data-target="tab-multimedia-curada">
+                    Metodologia A2: Multimédia (Curada)
+                </button>
+                <button class="tab-button py-4 px-6 text-base font-medium text-slate-500 hover:text-[#5096d2]" data-target="tab-gamificacao">
+                    Metodologia B: Geração de Jogos
+                </button>
+            </nav>
+
+            <div class="tab-content">
+
+                <section id="tab-multimedia-rapida" class="tab-pane active mb-10">
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">A Via da Geração Direta (Um Passo)</h3>
+                        <p class="text-slate-600 mb-6">
+                            Esta via privilegia a agilidade. O docente utiliza um único prompt mestre numa ferramenta de geração direta (texto-para-vídeo ou texto-para-áudio). A IA é responsável por gerar o roteiro e o produto multimédia simultaneamente.
+                        </p>
+                        
+                        <div class="flex justify-between items-center mb-3">
+                            <h4 class="text-lg font-semibold text-[#5096d2]">Modelo Mestre de Geração Direta (4.1.1)</h4>
+                            <button class="copy-button bg-[#5096d2] text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-[#5096d2] focus:outline-none focus:ring-2 focus:ring-[#5096d2] focus:ring-offset-2">
+                                Copiar Prompt
+                            </button>
+                        </div>
+                        
+                        <pre class="prompt-block bg-slate-100 p-4 rounded-lg overflow-x-auto text-sm text-slate-700">O MEU OBJETIVO É CRIAR UM CONTEÚDO PEDAGÓGICO SOBRE <span class="prompt-field">[CONCEITO CENTRAL OU TÓPICO]</span>.
+
+INSTRUÇÕES PRINCIPAIS:
+FORMATO DESEJADO: <span class="prompt-field">[ESCOLHA UM: VÍDEO / PODCAST]</span>
+PÚBLICO-ALVO: <span class="prompt-field">[PÚBLICO-ALVO]</span>.
+DURAÇÃO APROXIMADA: <span class="prompt-field">[DURAÇÃO]</span>.
+TOM GERAL: <span class="prompt-field">[TOM]</span>.
+
+INSTRUÇÕES DE NARRAÇÃO E VOZ:
+PERSONA: A NARRAÇÃO DEVE SOAR COMO <span class="prompt-field">[PERSONA]</span>.
+VOZ: <span class="prompt-field">[DESCRIÇÃO DA VOZ]</span>.
+(SE APLICÁVEL) VOZES MÚLTIPLAS: <span class="prompt-field">[DESCRIÇÃO DAS MÚLTIPLAS VOZES]</span>.
+
+INSTRUÇÕES DE ESTRUTURA (A IA DEVE SEGUIR ESTA ORDEM):
+
+1.  ABERTURA (O GANCHO):
+    Narração: Começa com <span class="prompt-field">[INSTRUÇÃO PARA A NARRAÇÃO]</span>.
+    <span class="prompt-field">[APENAS PARA VÍDEO]</span> Visual: <span class="prompt-field">[INSTRUÇÃO VISUAL]</span>.
+    <span class="prompt-field">[APENAS PARA PODCAST]</span> Áudio: <span class="prompt-field">[INSTRUÇÃO ÁUDIO]</span>.
+
+2.  DESENVOLVIMENTO:
+    Narração: A IA deve explicar <span class="prompt-field">[CONCEITO CENTRAL]</span>, focando-se em <span class="prompt-field">[NÚMERO]</span> pontos-chave. Usar <span class="prompt-field">[INSTRUÇÃO DE ESTILO]</span>.
+    <span class="prompt-field">[APENAS PARA VÍDEO]</span> Visual: <span class="prompt-field">[INSTRUÇÃO VISUAL]</span>.
+    <span class="prompt-field">[APENAS PARA PODCAST]</span> Áudio: <span class="prompt-field">[INSTRUÇÃO ÁUDIO]</span>.
+
+3.  CONCLUSÃO:
+    Narração: A IA deve <span class="prompt-field">[INSTRUÇÃO DE FECHO]</span>.
+    <span class="prompt-field">[APENAS PARA VÍDEO]</span> Visual: <span class="prompt-field">[INSTRUÇÃO VISUAL]</span>.
+    <span class="prompt-field">[APENAS PARA PODCAST]</span> Áudio: <span class="prompt-field">[INSTRUÇÃO ÁUDIO]</span>.
+
+CRIA O <span class="prompt-field">[FORMATO DESEJADO]</span> COM BASE NESTAS INSTRUÇÕES.
+</pre>
+                    </div>
+                </section>
+
+                <section id="tab-multimedia-curada" class="tab-pane mb-10">
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">A Via da Curadoria (Dois Passos)</h3>
+                        <p class="text-slate-600 mb-6">
+                            Esta via privilegia o controlo pedagógico. O docente gera primeiro o roteiro (Passo 1) utilizando uma ferramenta como o NotebookLM, e depois usa esse roteiro validado para a produção multimédia (Passo 2).
+                        </p>
+                        
+                        <div class="mb-8">
+                            <h4 class="text-lg font-semibold text-[#5096d2] mb-4">Passo 1: Gerar Roteiro (Com NotebookLM)</h4>
+                            <p class="text-slate-600 mb-4 text-sm">Use um dos seguintes modelos para gerar o roteiro. Lembre-se de carregar as suas fontes curriculares no NotebookLM primeiro.</p>
+                            
+                            <div class="mb-4">
+                                <div class="flex justify-between items-center mb-3">
+                                    <h5 class="font-semibold text-slate-800">Modelo Mestre de Roteiro de Vídeo (4.2.1)</h5>
+                                    <button class="copy-button bg-[#5096d2] text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-[#5096d2] focus:outline-none focus:ring-2 focus:ring-[#5096d2] focus:ring-offset-2">
+                                        Copiar Prompt
+                                    </button>
+                                </div>
+                                <pre class="prompt-block bg-slate-100 p-4 rounded-lg overflow-x-auto text-sm text-slate-700">[COM BASE NAS FONTES CARREGADAS SOBRE <span class="prompt-field">(TÓPICO ESPECÍFICO)</span>...]
+
+ATUA COMO UM ARGUMENTISTA DE VÍDEOS PEDAGÓGICOS E UM DESIGNER INSTRUCIONAL.
+O PÚBLICO-ALVO SÃO ALUNOS DO <span class="prompt-field">[ANO DE ESCOLARIDADE]</span>.
+O TEU OBJETIVO É GERAR UM ROTEIRO COMPLETO PARA UM VÍDEO DE <span class="prompt-field">[DURAÇÃO: XX-XX]</span> MINUTOS SOBRE <span class="prompt-field">[OBJETO CENTRAL]</span>.
+
+O ROTEIRO DEVE SER FORMATADO COM A NARRAÇÃO (VOZ-OFF) COMO TEXTO PRINCIPAL, E AS SUGESTÕES VISUAIS INSERIDAS ENTRE PARÊNTESES RETOS <span class="prompt-field">[ ]</span> NOS LOCAIS RESPETIVOS.
+
+O TOM DA NARRAÇÃO DEVE SER <span class="prompt-field">[INSERIR ADJETIVOS RELACIONADOS COM O TOM DESEJADO]</span>.
+
+UTILIZA A SEGUINTE ESTRUTURA PEDAGÓGICA DETALHADA PARA O ROTEIRO:
+
+1.  ABERTURA:
+    Narração: Começa com <span class="prompt-field">[TIPO DE MOMENTO INICIAL]</span> relacionada com <span class="prompt-field">[OBJETO CENTRAL]</span>.
+
+2.  CONTEXTUALIZAÇÃO (O PORQUÊ):
+    Narração: Explica a relevância do <span class="prompt-field">[OBJETO CENTRAL]</span>. Contextualiza o <span class="prompt-field">[OBJETO CENTRAL]</span> conceptualmente ou temporalmente. 
+    <span class="prompt-field">[Visual: SUGESTÃO VISUAL PARA O CONTEXTO]</span>.
+
+3.  EXPOSIÇÃO (OS CONCEITOS-CHAVE):
+    Narração: Define os termos essenciais. "Para percebermos <span class="prompt-field">[CONCEITO CENTRAL]</span>, precisamos primeiro de definir <span class="prompt-field">[TERMO A]</span> e <span class="prompt-field">[TERMO B]</span>." (Baseado nas fontes).
+    <span class="prompt-field">[Visual: SUGESTÃO VISUAL PARA OS CONCEITOS-CHAVE]</span>.
+
+4.  ANÁLISE / PROCESSO (COMO FUNCIONA):
+    Narração: Explica o mecanismo, o processo passo-a-passo, a relação causa-efeito, ou a sequência cronológica dos eventos. <span class="prompt-field">[INSTRUÇÃO]</span>.
+    <span class="prompt-field">[Visual: SUGESTÃO VISUAL PARA A ANÁLISE/PROCESSO]</span>.
+
+5.  EXEMPLIFICAÇÃO (O CONCRETO):
+    Narração: Fornece o exemplo mais claro ou o estudo de caso mais relevante das fontes. <span class="prompt-field">[INSTRUÇÃO]</span>.
+    <span class="prompt-field">[Visual: SUGESTÃO VISUAL PARA A EXEMPLIFICAÇÃO]</span>.
+
+6.  IMPLICAÇÕES (E ENTÃO?):
+    Narração: Discute o impacto, o legado, ou a importância de compreender este conceito. <span class="prompt-field">[INSTRUÇÃO]</span>.
+    <span class="prompt-field">[Visual: SUGESTÃO VISUAL PARA AS IMPLICAÇÕES]</span>.
+
+7.  SÍNTESE E FECHO:
+    Narração: Resume os <span class="prompt-field">[NÚMERO]</span> pontos essenciais que o aluno deve reter. Termina com uma pergunta de reflexão final.
+    <span class="prompt-field">[Visual: SUGESTÃO VISUAL PARA A SÍNTESE]</span>.
+</pre>
+                            </div>
+
+                            <div class="mb-4">
+                                <div class="flex justify-between items-center mb-3">
+                                    <h5 class="font-semibold text-slate-800">Modelo de Roteiro: Podcast Monólogo (4.2.2)</h5>
+                                    <button class="copy-button bg-[#5096d2] text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-[#5096d2] focus:outline-none focus:ring-2 focus:ring-[#5096d2] focus:ring-offset-2">
+                                        Copiar Prompt
+                                    </button>
+                                </div>
+                                <pre class="prompt-block bg-slate-100 p-4 rounded-lg overflow-x-auto text-sm text-slate-700">[COM BASE EM TODAS AS FONTES SOBRE <span class="prompt-field">(TÓPICO AMPLO)</span>...]
+
+ATUA COMO ANFITRIÃO E ESPECIALISTA DE UM PODCAST EDUCATIVO CHAMADO <span class="prompt-field">[NOME DO PODCAST]</span>.
+O PÚBLICO SÃO ALUNOS DO <span class="prompt-field">[ANO DE ESCOLARIDADE]</span>. O TOM DEVE SER <span class="prompt-field">[TOM]</span>.
+
+GERA O ROTEIRO COMPLETO (PALAVRA POR PALAVRA) PARA UM EPISÓDIO DE <span class="prompt-field">[DURAÇÃO]</span> SOBRE <span class="prompt-field">[TEMA DO EPISÓDIO]</span>.
+
+O ROTEIRO DEVE INCLUIR:
+1.  <span class="prompt-field">[VINHETA DE ABERTURA]</span>: <span class="prompt-field">[DESCRIÇÃO DA SUGESTÃO SONORA]</span>.
+2.  INTRODUÇÃO (ANFITRIÃO): APRESENTAÇÃO DO TEMA.
+3.  CORPO DO ROTEIRO: O DESENVOLVIMENTO DO TEMA, ESCRITO PARA SER FALADO.
+4.  <span class="prompt-field">[INDICAÇÕES DE CITAÇÃO]</span>: MARCA CLARAMENTE ONDE LER EXCERTOS DAS FONTES.
+5.  <span class="prompt-field">[INDICAÇÃO DE TRANSIÇÃO SONORA]</span>: <span class="prompt-field">[DESCRIÇÃO]</span>.
+6.  CONCLUSÃO: RESUMO E PERGUNTA DE REFLEXÃO.
+</pre>
+                            </div>
+
+                            <div class="mb-4">
+                                <div class="flex justify-between items-center mb-3">
+                                    <h5 class="font-semibold text-slate-800">Modelo de Roteiro: Entrevista Simulada (4.2.3)</h5>
+                                    <button class="copy-button bg-[#5096d2] text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-[#5096d2] focus:outline-none focus:ring-2 focus:ring-[#5096d2] focus:ring-offset-2">
+                                        Copiar Prompt
+                                    </button>
+                                </div>
+                                <pre class="prompt-block bg-slate-100 p-4 rounded-lg overflow-x-auto text-sm text-slate-700">[USANDO AS FONTES SOBRE A OBRA DE <span class="prompt-field">(AUTOR)</span> E AS FONTES SOBRE <span class="prompt-field">(CONCEITO)</span>...]
+
+GERA O ROTEIRO COMPLETO DE UM PODCAST DE <span class="prompt-field">[DURAÇÃO]</span> NO FORMATO "ENTREVISTA IMPOSSÍVEL".
+O DIÁLOGO É ENTRE:
+1.  ANFITRIÃO: UM MODERADOR CONTEMPORÂNEO, CURIOSO.
+2.  ENTREVISTADO: <span class="prompt-field">[FIGURA A SIMULAR]</span>.
+
+O TEMA DA ENTREVISTA É: <span class="prompt-field">[QUESTÃO CENTRAL]</span>.
+
+GERA AS <span class="prompt-field">[NÚMERO]</span> PERGUNTAS DO ANFITRIÃO E AS RESPOSTAS DETALHADAS DO ENTREVISTADO (EM PRIMEIRA PESSOA, COM BASE NAS FONTES).
+</pre>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="text-lg font-semibold text-[#5096d2] mb-4">Passo 2: Produzir o Média (Com Ferramenta Externa)</h4>
+                            <p class="text-slate-600 mb-4 text-sm">Após validar o roteiro do Passo 1, cole-o neste prompt de aplicação dentro de uma ferramenta de Texto-para-Média.</p>
+                            
+                            <div class="mb-4">
+                                <div class="flex justify-between items-center mb-3">
+                                    <h5 class="font-semibold text-slate-800">Modelo de Prompt de Aplicação (4.2.4)</h5>
+                                    <button class="copy-button bg-[#5096d2] text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-[#5096d2] focus:outline-none focus:ring-2 focus:ring-[#5096d2] focus:ring-offset-2">
+                                        Copiar Prompt
+                                    </button>
+                                </div>
+                                <pre class="prompt-block bg-slate-100 p-4 rounded-lg overflow-x-auto text-sm text-slate-700 mb-8">ATUA COMO UM <span class="prompt-field">[PERSONA/PAPEL]</span>.
+
+O TEU OBJETIVO É CRIAR UM <span class="prompt-field">[FORMATO: "VÍDEO", "PODCAST"]</span> COM BASE NO ROTEIRO EXATO QUE FORNEÇO ABAIXO.
+
+INSTRUÇÕES DE EXECUÇÃO (PERFORMANCE):
+TOM GERAL: <span class="prompt-field">[TOM]</span>.
+VOZ (NARRAÇÃO): <span class="prompt-field">[DESCRIÇÃO DA VOZ]</span>.
+RITMO: <span class="prompt-field">[RITMO]</span>.
+
+INSTRUÇÕES VISUAIS (APENAS PARA VÍDEO):
+ESTILO VISUAL: <span class="prompt-field">[ESTILO]</span>.
+COORDENAÇÃO: AS SUGESTÕES VISUAIS, INDICADAS ENTRE PARÊNTESES RETOS <span class="prompt-field">[ ]</span> NO ROTEIRO, DEVEM SER SEGUIDAS FIELMENTE E SINCRONIZADAS COM A NARRAÇÃO QUE AS PRECEDE OU SEGUE IMEDIATAMENTE.
+
+ROTEIRO A EXECUTAR:
+---
+<span class="prompt-field">[COLE AQUI O ROTEIRO GERADO E VALIDADO PELO NOTEBOOKLM, I.E., O OUTPUT COMPLETO DO MODELO 4.2.1]</span>
+---
+</pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+<div id="jogos" class="anchor-offset"></div>
+
+
+                <section id="tab-gamificacao" class="tab-pane mb-10">
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Metodologia B: Exploração Lúdica (Jogos Educativos)</h3>
+                        <p class="text-slate-600 mb-6">
+                            Esta abordagem foca-se na transformação de fontes curriculares em experiências de aprendizagem ativas e gamificadas. O objetivo é gerar protótipos de jogos que aplicam mecânicas de recompensa, tempo e pontuação para avaliar a compreensão de um texto ou conceito.
+                        </p>
+
+                        <h4 class="text-lg font-semibold text-[#5096d2] mb-4">Metodologia "Prompt-Mestre Híbrido" (5.1)</h4>
+                        
+                        <h5 class="font-semibold text-slate-900 mt-6">Objetivo Pedagógico Geral</h5>
+                        <p class="text-slate-600 mb-4 text-sm">
+                            Gerar automaticamente jogos educativos personalizados a partir de um texto literário ou escolar, aplicando os princípios do Gamification Model Canvas, Taxonomia de Bloom e design adaptativo de aprendizagem. O sistema cria experiências interativas que unem leitura, interpretação e jogo — com tempo, pontuação e classificação simbólica final.
+                        </p>
+
+                        <h5 class="font-semibold text-slate-900 mt-6">Etapa 1: Análise Textual e Definição Temática</h5>
+                        <ul class="list-disc list-inside text-slate-600 mb-4 text-sm space-y-1">
+                            <li>Receba um texto ou excerto literário.</li>
+                            <li>Analise seu conteúdo para identificar 3 a 5 temas possíveis (personagens, conceitos, conflitos, ideias-chave ou contextos históricos).</li>
+                            <li>Apresente os temas ao aluno e permita que ele escolha um tema central.</li>
+                        </ul>
+
+                        <h5 class="font-semibold text-slate-900 mt-6">Etapa 2: Definição da Tipologia Lúdica</h5>
+                        <p class="text-slate-600 mb-4 text-sm">Após a escolha do tema, ofereça ao aluno as 7 tipologias de jogos educacionais:</p>
+                        <div class="overflow-x-auto my-4"><table class="min-w-full divide-y divide-slate-300 bg-white shadow-sm rounded-lg border border-slate-200"><thead><tr class="bg-slate-50"><th class="px-4 py-2 text-left text-sm font-semibold text-slate-900">Tipologia</th><th class="px-4 py-2 text-left text-sm font-semibold text-slate-900">Descrição</th><th class="px-4 py-2 text-left text-sm font-semibold text-slate-900">Objetivo Cognitivo</th></tr></thead><tbody class="divide-y divide-slate-200"><tr><td class="px-4 py-2 text-sm text-slate-700">Caça-palavras</td><td class="px-4 py-2 text-sm text-slate-700">Encontre termos ocultos em uma grade.</td><td class="px-4 py-2 text-sm text-slate-700">Lembrar / Compreender</td></tr><tr><td class="px-4 py-2 text-sm text-slate-700">Quiz / Trivia</td><td class="px-4 py-2 text-sm text-slate-700">Responda perguntas cronometradas.</td><td class="px-4 py-2 text-sm text-slate-700">Compreender / Aplicar</td></tr><tr><td class="px-4 py-2 text-sm text-slate-700">Jogo da Memória</td><td class="px-4 py-2 text-sm text-slate-700">Combine pares de conceitos.</td><td class="px-4 py-2 text-sm text-slate-700">Lembrar / Associar</td></tr><tr><td class="px-4 py-2 text-sm text-slate-700">Quebra-cabeça / Puzzle</td><td class="px-4 py-2 text-sm text-slate-700">Resolva desafios lógicos.</td><td class="px-4 py-2 text-sm text-slate-700">Analisar / Avaliar</td></tr><tr><td class="px-4 py-2 text-sm text-slate-700">Narrativa Interativa</td><td class="px-4 py-2 text-sm text-slate-700">Escolhas que alteram o enredo.</td><td class="px-4 py-2 text-sm text-slate-700">Criar / Avaliar</td></tr><tr><td class="px-4 py-2 text-sm text-slate-700">Simulação</td><td class="px-4 py-2 text-sm text-slate-700">Experimente um processo real.</td><td class="px-4 py-2 text-sm text-slate-700">Aplicar / Avaliar</td></tr><tr><td class="px-4 py-2 text-sm text-slate-700">RPG Educativo</td><td class="px-4 py-2 text-sm text-slate-700">Assuma o papel de uma personagem.</td><td class="px-4 py-2 text-sm text-slate-700">Criar / Avaliar</td></tr></tbody></table></div>
+                        <p class="text-slate-600 mb-4 text-sm">Após a escolha, siga para o circuito de jogo.</p>
+
+                        <h5 class="font-semibold text-slate-900 mt-6">Etapa 3: Estruturação (Gamification Model Canvas)</h5>
+                        <p class="text-slate-600 mb-4 text-sm">Preencha as 9 áreas do Gamification Model Canvas, adaptadas ao contexto escolar:</p>
+                        <div class="overflow-x-auto my-4"><table class="min-w-full divide-y divide-slate-300 bg-white shadow-sm rounded-lg border border-slate-200"><thead><tr class="bg-slate-50"><th class="px-4 py-2 text-left text-sm font-semibold text-slate-900">Seção</th><th class="px-4 py-2 text-left text-sm font-semibold text-slate-900">Descrição</th></tr></thead><tbody class="divide-y divide-slate-200"><tr><td class="px-4 py-2 text-sm text-slate-700">Plataforma</td><td class="px-4 py-2 text-sm text-slate-700">Chat / Canvas / Browser — jogável e responsivo</td></tr><tr><td class="px-4 py-2 text-sm text-slate-700">Mecânicas</td><td class="px-4 py-2 text-sm text-slate-700">Regras: tempo, pontuação, níveis, desbloqueios</td></tr><tr><td class="px-4 py-2 text-sm text-slate-700">Dinâmicas</td><td class="px-4 py-2 text-sm text-slate-700">Emoções: curiosidade, descoberta, cooperação</td></tr><tr><td class="px-4 py-2 text-sm text-slate-700">Estética</td><td class="px-4 py-2 text-sm text-slate-700">Visual coerente com o tema (cores, ícones, sons)</td></tr><tr><td class="px-4 py-2 text-sm text-slate-700">Jogadores</td><td class="px-4 py-2 text-sm text-slate-700">Alunos e professores — individuais ou em pares</td></tr><tr><td class="px-4 py-2 text-sm text-slate-700">Componentes</td><td class="px-4 py-2 text-sm text-slate-700">Elementos interativos (cartas, botões, grid, etc.)</td></tr><tr><td class="px-4 py-2 text-sm text-slate-700">Comportamentos</td><td class="px-4 py-2 text-sm text-slate-700">Engajamento, reflexão, repetição e autoavaliação</td></tr><tr><td class="px-4 py-2 text-sm text-slate-700">Custos</td><td class="px-4 py-2 text-sm text-slate-700">Tempo e esforço pedagógico na criação do conteúdo</td></tr><tr><td class="px-4 py-2 text-sm text-slate-700">Resultados Esperados</td><td class="px-4 py-2 text-sm text-slate-700">Retenção do conhecimento, motivação e empatia</td></tr></tbody></table></div>
+                        <p class="text-slate-600 mb-4 text-sm font-semibold">Versão Aprimorada (a incluir):</p>
+                        <ul class="list-disc list-inside text-slate-600 mb-4 text-sm space-y-1">
+                            <li>Missões semanais;</li>
+                            <li>Mini-quiz pós-fase;</li>
+                            <li>Colecionáveis digitais (selos, troféus);</li>
+                            <li>Modo cooperativo;</li>
+                            <li>Narrativas desbloqueáveis;</li>
+                        </ul>
+
+                        <h5 class="font-semibold text-slate-900 mt-6">Etapa 4: Definição das Mecânicas Universais</h5>
+                        <p class="text-slate-600 mb-4 text-sm">Essas mecânicas são obrigatórias em qualquer tipologia gerada:</p>
+                        <div class="overflow-x-auto my-4"><table class="min-w-full divide-y divide-slate-300 bg-white shadow-sm rounded-lg border border-slate-200"><thead><tr class="bg-slate-50"><th class="px-4 py-2 text-left text-sm font-semibold text-slate-900">Mecânica</th><th class="px-4 py-2 text-left text-sm font-semibold text-slate-900">Implementação</th></tr></thead><tbody class="divide-y divide-slate-200"><tr><td class="px-4 py-2 text-sm text-slate-700">Temporizador</td><td class="px-4 py-2 text-sm text-slate-700">Cronômetro regressivo de 60–120s por fase. Quando o tempo zera, calcula-se o desempenho final.</td></tr><tr><td class="px-4 py-2 text-sm text-slate-700">Sistema de Pontuação</td><td class="px-4 py-2 text-sm text-slate-700">+10 por acerto, −5 por erro, bônus por combos de acertos consecutivos. Exibir contador dinâmico.</td></tr><tr><td class="px-4 py-2 text-sm text-slate-700">Classificação Final</td><td class="px-4 py-2 text-sm text-slate-700">Score define títulos simbólicos: 0–30 → Aprendiz, 31–60 → Explorador, 61–90 → Descobridor, 91+ → Conquistador. Mostrar frase motivadora (ex.: “Atingiu o nível Conquistador. Excelente desempenho.”).</td></tr></tbody></table></div>
+
+                        <h5 class="font-semibold text-slate-900 mt-6">Etapa 5: Lógica de Feedback e Avaliação</h5>
+                        <div class="overflow-x-auto my-4"><table class="min-w-full divide-y divide-slate-300 bg-white shadow-sm rounded-lg border border-slate-200"><thead><tr class="bg-slate-50"><th class="px-4 py-2 text-left text-sm font-semibold text-slate-900">Situação</th><th class="px-4 py-2 text-left text-sm font-semibold text-slate-900">Feedback</th><th class="px-4 py-2 text-left text-sm font-semibold text-slate-900">Impacto</th></tr></thead><tbody class="divide-y divide-slate-200"><tr><td class="px-4 py-2 text-sm text-slate-700">Acerto</td><td class="px-4 py-2 text-sm text-slate-700">Brilho verde, som breve de vitória</td><td class="px-4 py-2 text-sm text-slate-700">+10 pts</td></tr><tr><td class="px-4 py-2 text-sm text-slate-700">Erro</td><td class="px-4 py-2 text-sm text-slate-700">Efeito vermelho e dica textual</td><td class="px-4 py-2 text-sm text-slate-700">−5 pts</td></tr><tr><td class="px-4 py-2 text-sm text-slate-700">Tempo Esgotado</td><td class="px-4 py-2 text-sm text-slate-700">Tela de resumo e incentivo (ex.: “O processo de aprendizagem é contínuo. Tente novamente.”)</td><td class="px-4 py-2 text-sm text-slate-700">Score final</td></tr></tbody></table></div>
+                        <p class="text-slate-600 mb-4 text-sm">Além disso, ofereça feedback cognitivo: explique brevemente por que a resposta está correta ou incorreta e relacione ao texto-base.</p>
+
+                        <h5 class="font-semibold text-slate-900 mt-6">Etapa 6: Geração do Protótipo (HTML/CSS/JS em Canvas)</h5>
+                        <ul class="list-disc list-inside text-slate-600 mb-4 text-sm space-y-1">
+                            <li>Gere automaticamente um protótipo funcional no Canvas com:</li>
+                            <li>Visual minimalista e adaptado ao tema;</li>
+                            <li>Contadores de tempo e pontuação;</li>
+                            <li>Mensagem final simbólica com título e frase inspiradora;</li>
+                            <li>Lógica central independente da tipologia.</li>
+                        </ul>
+                        
+                        <div class="flex justify-between items-center mb-3 mt-4">
+                            <h5 class="font-semibold text-slate-800">Código Base Universal (Etapa 6)</h5>
+                            <button class="copy-button bg-[#5096d2] text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-[#5096d2] focus:outline-none focus:ring-2 focus:ring-[#5096d2] focus:ring-offset-2">
+                                Copiar Código
+                            </button>
+                        </div>
+                        <div class="prompt-block bg-slate-100 p-4 rounded-lg overflow-x-auto text-sm text-slate-700">
+<pre>
+&lt;div id="game-area"&gt;
+  &lt;div id="timer"&gt;Tempo: 60s&lt;/div&gt;
+  &lt;div id="score"&gt;Pontos: 0&lt;/div&gt;
+  &lt;canvas id="gameCanvas" width="500" height="500"&gt;&lt;/canvas&gt;
+&lt;/div&gt;
+&lt;div id="final-screen" style="display:none;"&gt;
+  &lt;h2 id="title"&gt;&lt;/h2&gt;
+  &lt;p id="message"&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+let score = 0, time = 60;
+const timer = setInterval(() =&gt; {
+  time--;
+  document.getElementById("timer").innerText = `Tempo: ${time}s`;
+  if (time &lt;= 0) { clearInterval(timer); endGame(); }
+}, 1000);
+
+function updateScore(delta) {
+  score += delta;
+  document.getElementById("score").innerText = `Pontos: ${score}`;
+}
+
+function endGame() {
+  let title = "", msg = "";
+  if (score &lt; 30) { title = "Aprendiz"; msg = "Primeiros passos no caminho do saber."; }
+  else if (score &lt; 60) { title = "Explorador"; msg = "Desvenda novas rotas do conhecimento."; }
+  else if (score &lt; 90) { title = "Descobridor"; msg = "Conquistou os mares da curiosidade!"; }
+  else { title = "Conquistador"; msg = "Tornou-se mestre do jogo e do saber!"; }
+  document.getElementById("final-screen").style.display = "block";
+  document.getElementById("title").innerText = title;
+  document.getElementById("message").innerText = msg;
+}
+&lt;/script&gt;
+</pre>
+                        </div>
+
+                        <h5 class="font-semibold text-slate-900 mt-6">Etapa 7: Elementos de Engajamento Avançado</h5>
+                        <p class="text-slate-600 mb-4 text-sm">Incorpore elementos avançados de engajamento:</p>
+                        <ul class="list-disc list-inside text-slate-600 mb-4 text-sm space-y-1">
+                            <li>Progressão adaptativa: dificuldade ajusta-se ao desempenho.</li>
+                            <li>Feedback empático: frases motivadoras e narrativas desbloqueáveis.</li>
+                            <li>Mini-histórias temáticas: cada acerto revela um trecho ou curiosidade literária.</li>
+                            <li>Colecionáveis simbólicos: o jogador acumula selos conforme níveis de Bloom atingidos.</li>
+                            <li>Leaderboard opcional: comparar resultados entre colegas (modo aula).</li>
+                        </ul>
+
+                        <h5 class="font-semibold text-slate-900 mt-6">Etapa 8: Reflexão Pedagógica Final</h5>
+                        <p class="text-slate-600 mb-4 text-sm">
+                            Instrua a IA a finalizar o processo com uma mensagem que reforce o valor pedagógico da gamificação, sublinhando a ligação entre a mecânica lúdica, a leitura atenta e a reflexão crítica sobre o conteúdo curricular.
+                        </p>
+
+                    </div>
+                </section>
+
+            </div>
+                <section id="submissao" class="mb-10 bg-white p-6 rounded-lg shadow-sm border border-slate-200 anchor-offset">
+  <h2 class="text-2xl font-bold text-[#5096d2] mb-4">
+    Formulário de Submissão Docente — Conteúdos Multimodais (RELIA)
+  </h2>
+
+  <p class="text-slate-700 mb-3">
+    <strong>Objetivo:</strong> permitir que docentes partilhem os conteúdos criados pelos seus alunos
+    (podcasts, vídeos e jogos), assegurando curadoria, transparência no uso de IA e autorização ética.
+  </p>
+
+  <p class="text-slate-700 mb-3">
+    <strong>Armazenamento:</strong> todos os ficheiros são guardados na Drive do RELIA (acesso restrito à equipa RELIA).
+  </p>
+
+  <p class="text-slate-700 mb-3">
+    <strong>Aviso:</strong> submissões sem consentimento ético não serão publicadas.
+  </p>
+
+  <p class="text-slate-700 font-semibold mb-6">
+    Preencha os formulários com atenção.
+  </p>
+
+  <div class="flex flex-wrap gap-4">
+    <a href="https://forms.gle/exemplo-submissao" target="_blank"
+       class="bg-[#5096d2] text-white px-5 py-2 rounded-md text-sm font-medium hover:bg-[#3b7fb9] focus:outline-none focus:ring-2 focus:ring-[#5096d2] focus:ring-offset-2">
+      Submissão
+    </a>
+    <a href="https://forms.gle/exemplo-feedback" target="_blank"
+       class="bg-[#5096d2] text-white px-5 py-2 rounded-md text-sm font-medium hover:bg-[#3b7fb9] focus:outline-none focus:ring-2 focus:ring-[#5096d2] focus:ring-offset-2">
+      Feedback
+    </a>
+  </div>
+</section>
+
+</div>
+
+    
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            const tabs = document.querySelectorAll('.tab-button');
+            const panes = document.querySelectorAll('.tab-pane');
+            const tabsBar = document.getElementById('multimedia');
+
+            // Função para ativar o separador
+            function activateTab(targetId, clickedBtn) {
+                tabs.forEach(t => {
+                    const isActive = clickedBtn ? (t === clickedBtn) : (t.dataset.target === targetId);
+                    t.classList.toggle('active', isActive);
+                    t.setAttribute('aria-selected', isActive ? 'true' : 'false');
+                });
+                panes.forEach(p => p.classList.toggle('active', p.id === targetId));
+            }
+            
+            // Ciclo das Metodologias (A1 -> A2 -> B -> A1 ...)
+            const cycleOrder = ['tab-multimedia-rapida','tab-multimedia-curada','tab-gamificacao'];
+            
+            // Função para obter o ID da aba atualmente ativa (ou o primeiro, se nada estiver ativo)
+            function getActiveTabId() {
+                const activePane = document.querySelector('.tab-pane.active');
+                return activePane ? activePane.id : cycleOrder[0]; // Retorna A1 por defeito
+            }
+            
+            function cycleMetodologias() {
+                // Se a URL não tiver o hash #multimedia, significa que o clique é para NAVIGAR para a secção.
+                // Neste caso, apenas definimos o hash para #multimedia (que ativa A1) e fazemos o scroll.
+                if (location.hash !== '#multimedia') {
+                    // Define o hash para #multimedia (o setTabByHash cuidará de ativar A1)
+                    history.pushState(null, '', '#multimedia');
+                    setTabByHash(); // Ativa imediatamente o A1
+                } else {
+                    // O utilizador JÁ ESTÁ na secção, então AVANÇAMOS o ciclo.
+                    const activeId = getActiveTabId();
+                    const current = cycleOrder.indexOf(activeId);
+                    
+                    // Calcula o índice do próximo item no ciclo (0 -> 1 -> 2 -> 0)
+                    const next = (current + 1) % cycleOrder.length;
+                    
+                    const nextId = cycleOrder[next];
+                    const btn = document.querySelector('.tab-button[data-target="' + nextId + '"]');
+                    
+                    if (btn) {
+                        // Usa a função de ativação de tab existente
+                        activateTab(nextId, btn);
+                    }
+                }
+                
+                // Scrol para a barra de tabs (garante que está sempre visível)
+                if (tabsBar) tabsBar.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+            
+            // Listeners para desktop e mobile que chamam o ciclo
+            const navDesk = document.getElementById('nav-metodologias');
+            if (navDesk) navDesk.addEventListener('click', (e) => { e.preventDefault(); cycleMetodologias(); });
+            const navMob = document.getElementById('nav-metodologias-mobile');
+            if (navMob) navMob.addEventListener('click', (e) => { e.preventDefault(); cycleMetodologias(); });
+
+            // Configuração dos botões de tab
+            tabs.forEach(btn => {
+                btn.setAttribute('role', 'tab');
+                btn.addEventListener('click', () => activateTab(btn.dataset.target, btn));
+            });
+
+            // Clipboard (mantém)
+            document.addEventListener('click', async (e) => {
+                const btn = e.target.closest('.copy-button');
+                if (!btn) return;
+                const promptBlock = btn.closest('div').nextElementSibling;
+                const textToCopy = promptBlock?.innerText ?? '';
+                const originalText = btn.innerText;
+                try {
+                    if (navigator.clipboard?.writeText) {
+                        await navigator.clipboard.writeText(textToCopy);
+                    } else {
+                        const ta = document.createElement('textarea');
+                        ta.value = textToCopy;
+                        ta.style.position = 'fixed';
+                        ta.style.opacity = '0';
+                        document.body.appendChild(ta);
+                        ta.select();
+                        document.execCommand('copy');
+                        document.body.removeChild(ta);
+                    }
+                    btn.innerText = 'Copiado!';
+                } catch (err) {
+                    console.error('Falha ao copiar: ', err);
+                    btn.innerText = 'Erro ao copiar';
+                } finally {
+                    setTimeout(() => { btn.innerText = originalText; }, 2000);
+                }
+            });
+
+            function setTabByHash() {
+                const h = location.hash;
+                if (h === '#jogos') {
+                    // Abrir a aba de Gamificação e garantir que a barra fica visível
+                    activateTab('tab-gamificacao');
+                    if (tabsBar) { tabsBar.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+                } else if (h === '#multimedia') {
+                    // Abrir a primeira aba de Multimédia e mostrar a barra
+                    activateTab('tab-multimedia-rapida');
+                    if (tabsBar) { tabsBar.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+                }
+                // Para #pic, o offset é tratado pelo id no H2 + CSS .anchor-offset
+            }
+
+            // Executar no carregamento e quando o hash mudar
+            setTabByHash();
+            window.addEventListener('hashchange', setTabByHash);
+        });
+    </script>
+
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const dropdown = document.getElementById("menu-dropdown");
+  if (menuBtn) {
+    menuBtn.addEventListener("click", () => dropdown.classList.toggle("hidden"));
+  }
+</script>
+
+
+<button id="backToTop"
+  class="fixed bottom-6 right-6 w-12 h-12 bg-[#5096d2] text-white rounded-full flex items-center justify-center shadow-[0_8px_24px_rgba(0,0,0,0.18)] ring-1 ring-black/5 hover:bg-[#3b7fb9] transition-colors"
+  title="Voltar ao topo" aria-label="Voltar ao topo" style="display:none;">
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+  </svg>
+</button>
+
+<style>
+  /* Evitar artefatos ao rolar */
+  #backToTop {
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    will-change: transform;
+  }
+</style>
+
+<script>
+  // Mostrar/esconder conforme o scroll e rolar suavemente ao topo no clique
+  (function() {
+    const backToTop = document.getElementById("backToTop");
+    // Mostrar apenas depois de 300px de scroll
+    function toggleVisibility() {
+      if (window.scrollY > 300) {
+        backToTop.style.display = "flex"; // Combina com as classes Tailwind do botão
+      } else {
+        backToTop.style.display = "none";
+      }
+    }
+    window.addEventListener("scroll", toggleVisibility, { passive: true });
+    toggleVisibility(); // Estado inicial
+
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  })();
+</script>
+
+<footer class="mt-20 bg-white">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <img src="banner patrocinios.jpg"
+         alt="Logótipos UMinho, CEHUM, FCT, PRR, Biblioteca Lúcio Craveiro da Silva"
+         class="w-full h-auto" />
+  </div>
+</footer>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabsBar = document.getElementById('multimedia');
+    function activateTabById(id) {
+      const btn = document.querySelector('.tab-button[data-target="' + id + '"]');
+      if (btn) btn.click(); // reaproveita o handler existente
+    }
+
+    document.body.addEventListener('click', (e) => {
+      const a = e.target.closest('a[data-open-tab]');
+      if (!a) return;
+      e.preventDefault();
+      const targetTab = a.getAttribute('data-open-tab');
+      // Atualiza o hash para garantir posicionamento consistente (barra de tabs)
+      if (location.hash !== '#multimedia') {
+        history.pushState(null, '', '#multimedia');
+      }
+      // Ativa a aba de jogos
+      activateTabById(targetTab);
+      // Fecha o menu mobile, se visível
+      const dropdown = document.getElementById('menu-dropdown');
+      if (dropdown && !dropdown.classList.contains('hidden')) {
+        dropdown.classList.add('hidden');
+      }
+      // Garante scroll para a barra de tabs
+      if (tabsBar) {
+        tabsBar.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Garante que ao chegar em #multimedia a aba A1 é selecionada
+    function ensureA1OnMultimediaHash() {
+      if (location.hash === '#multimedia') {
+        const btn = document.querySelector('.tab-button[data-target="tab-multimedia-rapida"]');
+        if (btn) btn.click();
+      }
+    }
+    ensureA1OnMultimediaHash();
+    window.addEventListener('hashchange', ensureA1OnMultimediaHash);
+  });
+</script>
+
+</body>
+</html>
