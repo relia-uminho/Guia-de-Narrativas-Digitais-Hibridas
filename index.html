@@ -208,7 +208,7 @@
 
                 <section id="tab-multimedia-rapida" class="tab-pane active mb-10">
                     <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">A Via da Geração Direta (Um Passo)</h3>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">A Via da Geração Direta </h3>
                         <p class="text-slate-600 mb-6">
                             Esta via privilegia a agilidade. O docente utiliza um único prompt mestre numa ferramenta de geração direta (texto-para-vídeo ou texto-para-áudio). A IA é responsável por gerar o roteiro e o produto multimédia simultaneamente.
                         </p>
@@ -220,7 +220,7 @@
                             </button>
                         </div>
                         
-                        <pre class="prompt-block bg-slate-100 p-4 rounded-lg overflow-x-auto text-sm text-slate-700">O MEU OBJETIVO É CRIAR UM CONTEÚDO PEDAGÓGICO SOBRE <span class="prompt-field">[CONCEITO CENTRAL OU TÓPICO]</span>.
+                        <pre class="prompt-block bg-slate-100 p-4 rounded-lg overflow-x-auto text-sm text-slate-700">O OBJETIVO É CRIAR UM <span class="prompt-field">[VÍDEO/PODCAST]</span> PEDAGÓGICO SOBRE <span class="prompt-field">[CONCEITO CENTRAL OU TÓPICO]</span>.
 
 INSTRUÇÕES PRINCIPAIS:
 FORMATO DESEJADO: <span class="prompt-field">[ESCOLHA UM: VÍDEO / PODCAST]</span>
@@ -235,29 +235,31 @@ VOZ: <span class="prompt-field">[DESCRIÇÃO DA VOZ]</span>.
 
 INSTRUÇÕES DE ESTRUTURA (A IA DEVE SEGUIR ESTA ORDEM):
 
-1.  ABERTURA (O GANCHO):
-    Narração: Começa com <span class="prompt-field">[INSTRUÇÃO PARA A NARRAÇÃO]</span>.
+1.  CONTEXTUALIZAÇÃO E FOCO:
+    Objetivo: estabelecer o objeto de estudo e definir o "porquê" da análise.
+    Narração: Indica o contexto essencial do <span class="prompt-field">[CONCEITO CENTRAL]</span>. Apresenta a tese ou a questão específica que esta análise irá explorar. 
     <span class="prompt-field">[APENAS PARA VÍDEO]</span> Visual: <span class="prompt-field">[INSTRUÇÃO VISUAL]</span>.
-    <span class="prompt-field">[APENAS PARA PODCAST]</span> Áudio: <span class="prompt-field">[INSTRUÇÃO ÁUDIO]</span>.
+    
+2.  ANÁLISE DETALHADA:
+    Objetivo: Executar a análise pormenorizada, dissecando o objeto de estudo.
+    Narração (ponto 1):  <span class="prompt-field">[Instruções de focalização no primeiro elemento crucial]</span>. A narração deve destacar  <span class="prompt-field">[PALAVRAS-CHAVE OU DETALHES]</span>.
+    <span class="prompt-field">[APENAS PARA VÍDEO]</span> Visual: <span class="prompt-field">[INSTRUÇÃO VISUAL PARA A APRESENTAÇÃO DO PONTO 1]</span>.
+    Narração (ponto 2):  <span class="prompt-field">[Instruções de focalização no primeiro elemento crucial]</span>. A narração deve destacar  <span class="prompt-field">[PALAVRAS-CHAVE OU DETALHES]</span>.
+    <span class="prompt-field">[APENAS PARA VÍDEO]</span> Visual: <span class="prompt-field">[INSTRUÇÃO VISUAL PARA A APRESENTAÇÃO DO PONTO 2]</span>.
 
-2.  DESENVOLVIMENTO:
-    Narração: A IA deve explicar <span class="prompt-field">[CONCEITO CENTRAL]</span>, focando-se em <span class="prompt-field">[NÚMERO]</span> pontos-chave. Usar <span class="prompt-field">[INSTRUÇÃO DE ESTILO]</span>.
+3.  SÍNTESE, CONCLUSÃO E SIGNIFICADO:
+    Objetivo: Consolidar a análise e sublinhar a sua relevância.
+    Narração: Recapitular como de que modo é que os pontos de análise (2.) respondem à questão colocada (1.). Concluir com o significado mais vasto ou a implicação pedagógica do <span class="prompt-field">[CONCEITO CENTRAL]</span>.
     <span class="prompt-field">[APENAS PARA VÍDEO]</span> Visual: <span class="prompt-field">[INSTRUÇÃO VISUAL]</span>.
-    <span class="prompt-field">[APENAS PARA PODCAST]</span> Áudio: <span class="prompt-field">[INSTRUÇÃO ÁUDIO]</span>.
-
-3.  CONCLUSÃO:
-    Narração: A IA deve <span class="prompt-field">[INSTRUÇÃO DE FECHO]</span>.
-    <span class="prompt-field">[APENAS PARA VÍDEO]</span> Visual: <span class="prompt-field">[INSTRUÇÃO VISUAL]</span>.
-    <span class="prompt-field">[APENAS PARA PODCAST]</span> Áudio: <span class="prompt-field">[INSTRUÇÃO ÁUDIO]</span>.
-
-CRIA O <span class="prompt-field">[FORMATO DESEJADO]</span> COM BASE NESTAS INSTRUÇÕES.
+  
+CRIA O <span class="prompt-field">[FORMATO DESEJADO: VÍDEO/PODCAST]</span> COM BASE NESTAS INSTRUÇÕES.
 </pre>
                     </div>
                 </section>
 
                 <section id="tab-multimedia-curada" class="tab-pane mb-10">
                     <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">A Via da Curadoria (Dois Passos)</h3>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">A Via da Geração com Roteiro</h3>
                         <p class="text-slate-600 mb-6">
                             Esta via privilegia o controlo pedagógico. O docente gera primeiro o roteiro (Passo 1) utilizando uma ferramenta como o NotebookLM, e depois usa esse roteiro validado para a produção multimédia (Passo 2).
                         </p>
@@ -603,6 +605,65 @@ Jogar é aprender a ler o mundo com mais empatia e curiosidade.”
                 </section>
 
             </div>
+
+                        <!-- SECÇÃO METODOLOGIA C (CONTEÚDO ATUALIZADO) -->
+            <section id="metodologia-c" class="mb-10 bg-white p-6 rounded-lg shadow-sm border border-slate-200 anchor-offset">
+                <h2 class="text-2xl font-bold text-[#5096d2] mb-4">
+                    Metodologia C: Geração de Artefactos Visuais
+                </h2>
+                
+                <p class="text-slate-600 mb-6">
+                    Esta secção foca-se na criação de artefactos visuais singulares (imagens estáticas ou vídeos muito curtos) através de ferramentas como Imagen, Midjourney ou Sora. Estes elementos podem ser usados autonomamente ou como componentes visuais para integrar nos roteiros da Metodologia A2. A chave para a geração visual é a "descritividade sensorial" e a "especificidade estilística".
+                </p>
+
+                <div class="mt-6 space-y-6">
+                    <!-- Modelo 6.1 -->
+                    <div class="mb-4">
+                        <div class="flex justify-between items-center mb-3">
+                            <h5 class="font-semibold text-slate-800">6.1 Modelo de Prompt: Visualização de Conceito Abstrato</h5>
+                            <button class="copy-button bg-[#5096d2] text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-[#3b7fb9] focus:outline-none focus:ring-2 focus:ring-[#5096d2] focus:ring-offset-2">
+                                Copiar Prompt
+                            </button>
+                        </div>
+                        <p class="text-sm text-slate-600 mb-3"><strong>Objetivo Pedagógico:</strong> Tornar tangível um conceito complexo, teórico ou invisível (e.g., 'democracia', 'saudade', 'entropia').</p>
+                        <pre class="prompt-block bg-slate-100 p-4 rounded-lg overflow-x-auto text-sm text-slate-700">Gera uma imagem <span class="prompt-field">[ESTILO: fotorealista, pintura a óleo, arte digital, surrealista, diagramático]</span> que represente visualmente o conceito de <span class="prompt-field">[CONCEITO ABSTRATO]</span>.
+A imagem deve focar-se em <span class="prompt-field">[ELEMENTOS VISUAIS OU METÁFORA]</span> para simbolizar <span class="prompt-field">[IDEIA CENTRAL]</span>.
+<span class="prompt-field">[INSTRUÇÕES ADICIONAIS DE COMPOSIÇÃO OU LUZ]</span>.</pre>
+                    </div>
+
+                    <!-- Modelo 6.2 -->
+                    <div class="mb-4">
+                        <div class="flex justify-between items-center mb-3">
+                            <h5 class="font-semibold text-slate-800">6.2 Modelo de Prompt: Recriação de Cenário (Histórico ou Literário)</h5>
+                            <button class="copy-button bg-[#5096d2] text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-[#3b7fb9] focus:outline-none focus:ring-2 focus:ring-[#5096d2] focus:ring-offset-2">
+                                Copiar Prompt
+                            </button>
+                        </div>
+                        <p class="text-sm text-slate-600 mb-3"><strong>Objetivo Pedagógico:</strong> Criar uma "fotografia impossível" ou uma visualização de um cenário descrito num texto.</p>
+                        <pre class="prompt-block bg-slate-100 p-4 rounded-lg overflow-x-auto text-sm text-slate-700">Cria uma <span class="prompt-field">[IMAGEM/VÍDEO CURTO]</span> que recrie <span class="prompt-field">[CENA OU EVENTO HISTÓRICO/LITERÁRIO]</span>.
+A cena deve ser vista do ponto de vista de <span class="prompt-field">[PERSPECTIVA]</span>.
+O estilo deve ser <span class="prompt-field">[ESTILO: e.g., fotografia a preto e branco granulada, pintura a óleo clássica, documentário cinematográfico]</span>.
+Foca-te nos seguintes detalhes de ambiente: <span class="prompt-field">[DETALHE 1]</span>, <span class="prompt-field">[DETALHE 2]</span>.</pre>
+                    </div>
+
+                    <!-- Modelo 6.3 -->
+                    <div class="mb-4">
+                        <div class="flex justify-between items-center mb-3">
+                            <h5 class="font-semibold text-slate-800">6.3 Modelo de Prompt: Tradução Intersemiótica (Texto para Imagem)</h5>
+                            <button class="copy-button bg-[#5096d2] text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-[#3b7fb9] focus:outline-none focus:ring-2 focus:ring-[#5096d2] focus:ring-offset-2">
+                                Copiar Prompt
+                            </button>
+                        </div>
+                        <p class="text-sm text-slate-600 mb-3"><strong>Objetivo Pedagógico:</strong> Forçar o aluno (ou o professor) a analisar o "tom" e a "emoção" de um texto, traduzindo-os num estilo visual.</p>
+                        <pre class="prompt-block bg-slate-100 p-4 rounded-lg overflow-x-auto text-sm text-slate-700">Gera uma imagem que capture o tom, a emoção e o estilo do seguinte excerto literário.
+O estilo visual da imagem deve ser <span class="prompt-field">[MOVIMENTO ARTÍSTICO OU ESTILO VISUAL]</span>.
+Excerto: "<span class="prompt-field">[COLE AQUI O EXCERTO LITERÁRIO CURTO]</span>"</pre>
+                    </div>
+                </div>
+                
+            </section>
+            <!-- FIM DA SECÇÃO METODOLOGIA C -->
+            
                 <section id="submissao" class="mb-10 bg-white p-6 rounded-lg shadow-sm border border-slate-200 anchor-offset">
   <h2 class="text-2xl font-bold text-[#5096d2] mb-4">
     Formulário de Submissão Docente — Conteúdos Multimodais (RELIA)
@@ -861,3 +922,4 @@ Jogar é aprender a ler o mundo com mais empatia e curiosidade.”
 
 </body>
 </html>
+
