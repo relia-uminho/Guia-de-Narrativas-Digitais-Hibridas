@@ -451,50 +451,139 @@ ROTEIRO A EXECUTAR:
                         </ul>
                         
                         <div class="flex justify-between items-center mb-3 mt-4">
-                            <h5 class="font-semibold text-slate-800">Código Base Universal (Etapa 6)</h5>
+                            <h5 class="font-semibold text-slate-800">Prompt-Mestre Completo (5.1)</h5>
                             <button class="copy-button bg-[#5096d2] text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-[#5096d2] focus:outline-none focus:ring-2 focus:ring-[#5096d2] focus:ring-offset-2">
-                                Copiar Código
+                                Copiar Prompt
                             </button>
                         </div>
-                        <div class="prompt-block bg-slate-100 p-4 rounded-lg overflow-x-auto text-sm text-slate-700">
-<pre>
+                        
+                        <pre class="prompt-block bg-slate-100 p-4 rounded-lg overflow-x-auto overflow-y-scroll max-h-96 text-sm text-slate-700">PROMPT-MESTRE — GERADOR DE JOGOS EDUCATIVOS INTERATIVOS (RELIA-FCT / GEMINI-CANVAS)
+
+🎯 Objetivo Geral
+Gerar automaticamente jogos educativos personalizados a partir de um texto literário ou escolar, aplicando os princípios do Gamification Model Canvas, Taxonomia de Bloom e design adaptativo de aprendizagem. O sistema cria experiências interativas que unem leitura, interpretação e jogo — com tempo, pontuação e classificação simbólica final.
+
+🧩 ETAPA 1 — Entrada e Análise do Texto
+Recebe um texto ou excerto literário.
+
+Com base em <span class="prompt-field">[FONTE(S) COMPLETA(S) // PARTE DA(S) FONTE(S)]</span>
+1.  Gera um resumo de <span class="prompt-field">[NÚMERO DE PALAVRAS]</span> palavras que sintetize os argumentos principais do corpus.
+2.  Identifica e lista os conceitos-chave ou termos técnicos mais importantes mencionados.
+3.  Extrai a tese ou argumento central de <span class="prompt-field">[NOME DA FONTE ESPECÍFICA]</span>.
+
+🕹️ ETAPA 2 — Escolha da Tipologia de Jogo
+Após a escolha do tema, oferece ao aluno as 7 tipologias de jogos educacionais:
+
+Tipologia | Descrição | Objetivo Cognitivo
+--- | --- | ---
+🧩 Caça-palavras | Encontre termos ocultos em uma grade. | Lembrar / Compreender
+❓ Quiz / Trivia | Responda perguntas cronometradas. | Compreender / Aplicar
+🧠 Jogo da Memória | Combine pares de conceitos. | Lembrar / Associar
+🔐 Quebra-cabeça / Puzzle | Resolva desafios lógicos. | Analisar / Avaliar
+📖 Narrativa Interativa | Escolhas que alteram o enredo. | Criar / Avaliar
+⚙️ Simulação | Experimente um processo real. | Aplicar / Avaliar
+🧙 RPG Educativo | Assuma o papel de uma personagem. | Criar / Avaliar
+
+Após a escolha, siga para o circuito de jogo.
+
+🎮 ETAPA 3 — Construção Automática do Canvas de Gamificação
+Preenche as 9 áreas do Gamification Model Canvas, adaptadas ao contexto escolar:
+
+Seção | Descrição
+--- | ---
+Plataforma | Chat / Canvas / Browser — jogável e responsivo
+Mecânicas | Regras: tempo, pontuação, níveis, desbloqueios
+Dinâmicas | Emoções: curiosidade, descoberta, cooperação
+Estética | Visual coerente com o tema (cores, ícones, sons)
+Jogadores | Alunos e professores — individuais ou em pares
+Componentes | Elementos interativos (cartas, botões, grid, etc.)
+Comportamentos | Engajamento, reflexão, repetição e autoavaliação
+Custos | Tempo e esforço pedagógico na criação do conteúdo
+Resultados Esperados | Retenção do conhecimento, motivação e empatia
+
+Inclua também uma Versão Aprimorada, com:
+* Missões semanais;
+* Mini-quiz pós-fase;
+* Colecionáveis digitais (selos, troféus);
+* Modo cooperativo;
+* Narrativas desbloqueáveis.
+
+🧮 ETAPA 4 — Módulo de Mecânicas Universais
+Essas mecânicas são obrigatórias em qualquer tipologia gerada:
+
+Mecânica | Implementação
+--- | ---
+⏱️ Temporizador | Cronômetro regressivo de 60–120s por fase. Quando o tempo zera, calcula-se o desempenho final.
+⭐ Sistema de Pontuação | +10 por acerto, −5 por erro, bônus por combos de acertos consecutivos. Exibir contador dinâmico.
+📊 Classificação Final | Score define títulos simbólicos: 0–30 → Aprendiz, 31–60 → Explorador, 61–90 → Descobridor, 91+ → Conquistador. Mostrar frase motivadora (ex.: “Bravo! Domou os mares do conhecimento!”).
+
+⚙️ ETAPA 5 — Lógica de Engajamento e Feedback
+
+Situação | Feedback | Impacto
+--- | --- | ---
+✅ Acerto | Brilho verde, som breve de vitória | +10 pts
+❌ Erro | Efeito vermelho e dica textual | −5 pts
+⏱️ Tempo Esgotado | Tela de resumo e incentivo (“O conhecimento é um mar — volte a navegar!”) | Score final
+
+Além disso, ofereça feedback cognitivo: explique brevemente por que a resposta está correta ou incorreta e relacione ao texto-base.
+
+💻 ETAPA 6 — Geração do Protótipo (HTML/CSS/JS em Canvas)
+Gera automaticamente um protótipo funcional no Canvas com:
+
+* Visual minimalista e adaptado ao tema;
+* Contadores de tempo e pontuação;
+* Mensagem final simbólica com título e frase inspiradora;
+* Lógica central independente da tipologia.
+
+🔸 Código Base Universal
+
 &lt;div id="game-area"&gt;
-  &lt;div id="timer"&gt;Tempo: 60s&lt;/div&gt;
-  &lt;div id="score"&gt;Pontos: 0&lt;/div&gt;
-  &lt;canvas id="gameCanvas" width="500" height="500"&gt;&lt;/canvas&gt;
+&lt;div id="timer"&gt;Tempo: 60s&lt;/div&gt;
+&lt;div id="score"&gt;Pontos: 0&lt;/div&gt;
+&lt;canvas id="gameCanvas" width="500" height="500"&gt;&lt;/canvas&gt;
 &lt;/div&gt;
+
 &lt;div id="final-screen" style="display:none;"&gt;
-  &lt;h2 id="title"&gt;&lt;/h2&gt;
-  &lt;p id="message"&gt;&lt;/p&gt;
+&lt;h2 id="title"&gt;&lt;/h2&gt;
+&lt;p id="message"&gt;&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;script&gt;
 let score = 0, time = 60;
-const timer = setInterval(() =&gt; {
-  time--;
-  document.getElementById("timer").innerText = `Tempo: ${time}s`;
-  if (time &lt;= 0) { clearInterval(timer); endGame(); }
-}, 1000);
+const timer = setInterval(()=&gt;{
+time--; document.getElementById("timer").innerText=`Tempo: ${time}s`;
+if(time&lt;=0){clearInterval(timer);endGame();}
+},1000);
 
-function updateScore(delta) {
-  score += delta;
-  document.getElementById("score").innerText = `Pontos: ${score}`;
-}
+function updateScore(delta){score+=delta;document.getElementById("score").innerText=`Pontos: ${score}`;}
 
-function endGame() {
-  let title = "", msg = "";
-  if (score &lt; 30) { title = "Aprendiz"; msg = "Primeiros passos no caminho do saber."; }
-  else if (score &lt; 60) { title = "Explorador"; msg = "Desvenda novas rotas do conhecimento."; }
-  else if (score &lt; 90) { title = "Descobridor"; msg = "Conquistou os mares da curiosidade!"; }
-  else { title = "Conquistador"; msg = "Tornou-se mestre do jogo e do saber!"; }
-  document.getElementById("final-screen").style.display = "block";
-  document.getElementById("title").innerText = title;
-  document.getElementById("message").innerText = msg;
+function endGame(){
+let title="", msg="";
+if(score&lt;30){title="Aprendiz";msg="Primeiros passos no caminho do saber.";}
+else if(score&lt;60){title="Explorador";msg="Desvenda novas rotas do conhecimento.";}
+else if(score&lt;90){title="Descobridor";msg="Conquistou os mares da curiosidade!";}
+else{title="Conquistador";msg="Tornou-se mestre do jogo e do saber!";}
+document.getElementById("final-screen").style.display="block";
+document.getElementById("title").innerText=title;
+document.getElementById("message".innerText=msg;
 }
 &lt;/script&gt;
-</pre>
-                        </div>
 
+🚀 ETAPA 7 — Inovação e Disrupção
+Incorpore elementos avançados de engajamento:
+
+* Progressão adaptativa: dificuldade ajusta-se ao desempenho.
+* Feedback empático: frases motivadoras e narrativas desbloqueáveis.
+* Mini-histórias temáticas: cada acerto revela um trecho ou curiosidade literária.
+* Colecionáveis simbólicos: o jogador acumula selos conforme níveis de Bloom atingidos.
+* Leaderboard opcional: comparar resultados entre colegas (modo aula).
+
+🌟 ETAPA 8 — Encerramento e Reflexão
+Finaliza com uma mensagem inspiradora reforçando os valores da gamificação educativa:
+
+“Cada fase é uma leitura. Cada acerto, uma descoberta. Cada erro, um convite à reflexão.
+Jogar é aprender a ler o mundo com mais empatia e curiosidade.”
+</pre>
+                        
                         <h5 class="font-semibold text-slate-900 mt-6">Etapa 7: Elementos de Engajamento Avançado</h5>
                         <p class="text-slate-600 mb-4 text-sm">Incorpore elementos avançados de engajamento:</p>
                         <ul class="list-disc list-inside text-slate-600 mb-4 text-sm space-y-1">
